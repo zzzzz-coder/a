@@ -19,8 +19,8 @@ app.use('/js', express.static(path.join('.', 'js')));
 app.use(express.static(path.join('.', 'public'))); // <-- public для HTML
 
 // Бот
-const BOT_TOKEN = "8234484342:AAFJbf4L_MtrjMA8JsbkMP04ERynY4Iyn_g";
-const CHAT_ID = 713172111;
+const BOT_TOKEN = "***";
+const CHAT_ID = 111;
 
 // Маршруты API
 app.post("/sendPromo", async (req, res) => {
