@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Крестики-нолики — Игрок vs Компьютер</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="panel">
+      <h1>Крестики-нолики</h1>
+      <p class="lead">Играй против компьютера. Компьютер использует оптимальную стратегию (minimax). Можно выбрать, кто ходит первым.</p>
+      <div class="controls">
+        <button class="btn" id="firstX">Игрок X</button>
+        <button class="btn" id="firstO">Игрок O</button>
+        <button class="btn ghost" id="undo" title="Откат хода">Отменить ход</button>
+      </div>
+      <div class="status" id="status">Выберите, кто ходит первым</div>
+      <div class="small">Советы: <span id="tip">Если хочешь лёгкую игру — начни вторым.</span></div>
+      <div class="footer" style="margin-top:18px">
+        <div class="score">
+          <div class="score-item">Игрок: <strong id="scorePlayer">0</strong></div>
+          <div class="score-item">Компьютер: <strong id="scoreAI">0</strong></div>
+          <div class="score-item">Ничьи: <strong id="scoreDraw">0</strong></div>
+        </div>
+      </div>
+      <div class="repeatBtn_container"> <button class="btn primary" id="restart">Новая игра</button> </div>
+    </div>
+
+    <div class="panel board-wrap">
+      <div id="board" class="board" role="grid" aria-label="Tic Tac Toe board"></div>
+      <div style="height:12px"></div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <div class="small">Ход:</div>
+        <div id="turn" class="small" style="font-weight:700">—</div>
+      </div>
+    </div>
+  </div>
+  <script src="/js/main.js"></script>
+</body>
+</html>
